@@ -1,0 +1,149 @@
+.intro {
+  height: min(900px, 90svh);
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: fit-content;
+    width: 100%;
+  }
+
+  .buttonsRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media (width < $mobile) {
+    .buttonsRow {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  h1 {
+    position: relative;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+
+    @media (width < $tablet) {
+      font-size: 3rem;
+    }
+
+    @media (width < $mobile) {
+      font-size: 3rem;
+    }
+
+    &::after {
+      content: ".";
+      color: var(--accent);
+    }
+  }
+
+  h2 {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+    max-width: 40rem;
+
+    @media (width < $mobile) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.highlighted {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.dashLine {
+  position: absolute;
+}
+
+.dashLine[data-side="left"] {
+  left: -10px;
+}
+
+.dashLine[data-side="right"] {
+  right: 10px;
+}
+
+.dashLine[data-side="left"],
+.dashLine[data-side="right"] {
+  width: 1px;
+  height: calc(100% + 8rem);
+  transform: translateY(-4rem);
+
+  background: linear-gradient(
+    180deg,
+    oklch(from var(--primary) l c h / 0.2),
+    oklch(from var(--primary) l c h / 0.2) 50%,
+    transparent 0,
+    transparent
+  );
+
+  background-size: 10px 10px;
+
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black calc(100% - calc(100% - 4rem)),
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black calc(100% - calc(100% - 4rem)),
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+}
+
+.dashLine[data-side="top"] {
+  top: -10px;
+}
+
+.dashLine[data-side="bottom"] {
+  bottom: -10px;
+}
+
+.dashLine[data-side="top"],
+.dashLine[data-side="bottom"] {
+  width: calc(100% + 8rem);
+  height: 1px;
+  transform: translateX(-4rem);
+
+  background: linear-gradient(
+    90deg,
+    oklch(from var(--primary) l c h / 0.2),
+    oklch(from var(--primary) l c h / 0.2) 50%,
+    transparent 0,
+    transparent
+  );
+
+  background-size: 10px 10px;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black calc(100% - calc(100% - 4rem)),
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black calc(100% - calc(100% - 4rem)),
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+}
