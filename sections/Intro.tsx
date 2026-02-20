@@ -10,10 +10,6 @@ const headlineFont = Bodoni_Moda({
 export default async function Intro() {
   const t = await getTranslations("homepage.intro");
 
-  function openURL(url: string): void {
-    window.open(url, "_blank")?.focus();
-  }
-
   return (
     <section id="intro" className={styles.intro}>
       <div className={`container ${styles.mainContent}`}>
