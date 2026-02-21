@@ -24,22 +24,20 @@
 *::after {
   box-sizing: border-box;
   user-select: text;
+  margin: 0;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  position: relative;
-  max-width: 100vw;
-  background-color: var(--bg);
-  overflow-x: clip;
-  transition: background-color;
-  transition-duration: 0.3s;
+  display: block;
+  min-height: 100%;
 }
 
 main {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  display: block;
 }
 
 section {
@@ -51,12 +49,13 @@ section {
 }
 
 .container {
+  height: 100%;
   max-width: 1200px;
-  padding: 4rem calc(1rem + env(safe-area-inset-right)) 4rem
-    calc(1rem + env(safe-area-inset-left));
+  padding: 8rem calc(1rem + env(safe-area-inset-left)) 8rem
+    calc(1rem + env(safe-area-inset-right));
 
   @media (width < 640px) {
-    padding: 3rem calc(1rem + env(safe-area-inset-right)) 3rem
-      calc(1rem + env(safe-area-inset-left));
+    padding: 5rem calc(1rem + env(safe-area-inset-left)) 5rem
+      calc(1rem + env(safe-area-inset-right));
   }
 }
