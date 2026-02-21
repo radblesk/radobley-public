@@ -7,6 +7,8 @@ export enum ButtonStyle {
   primary = "primary",
   secondary = "secondary",
   tertiary = "tertiary",
+  light = "light",
+  dark = "dark",
 }
 
 export enum ButtonSymbolSide {

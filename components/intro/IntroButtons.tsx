@@ -14,7 +14,8 @@ export default function IntroButtons() {
     <div className={styles.buttonsRow}>
       <Button
         title={t("primaryButton")}
-        action={() => window.open("#contact", "_self")}
+        action={() => document.getElementById("contact")?.scrollIntoView()}
+        style={ButtonStyle.light}
       />
 
       <Button

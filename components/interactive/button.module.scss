@@ -61,3 +61,21 @@
     background-color: oklch(from var(--accent) l c h / 0.9);
   }
 }
+
+.light {
+  background-color: white;
+  color: black;
+
+  &:hover {
+    background-color: oklch(from white l c h / 0.8);
+  }
+}
+
+.dark {
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: oklch(from black l c h / 0.8);
+  }
+}
