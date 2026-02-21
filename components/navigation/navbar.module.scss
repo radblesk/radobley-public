@@ -1,0 +1,141 @@
+.global {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: black;
+  color: white;
+
+  z-index: 99;
+
+  transition: height 0.3s ease-in-out;
+
+  img {
+    height: 1.5rem;
+    width: auto;
+  }
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 4rem;
+
+  padding: 1rem calc(1rem + env(safe-area-inset-left)) 1rem
+    calc(1rem + env(safe-area-inset-right));
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fullscreenContent {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+
+  width: 100%;
+  height: 100svh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  background-color: black;
+
+  div:nth-child(1) {
+    width: 50%;
+    background-color: #ff3500;
+
+    @media (width < $mobile) {
+      display: none;
+    }
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: start;
+
+    width: 50%;
+
+    padding: 3rem calc(6rem + env(safe-area-inset-right)) 3rem
+      calc(2rem + env(safe-area-inset-left));
+
+    @media (width < $mobile) {
+      padding: 2rem calc(3rem + env(safe-area-inset-right)) 3rem
+        calc(3rem + env(safe-area-inset-left));
+    }
+
+    @media (width < $mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.primaryList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 6rem;
+  line-height: 8rem;
+
+  @media (width < $mobile) {
+    font-size: 2rem;
+  }
+
+  li {
+    width: fit-content;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.secondaryList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  color: oklch(from white l c h / 0.8);
+
+  @media (width < $mobile) {
+    font-size: 1rem;
+  }
+
+  li {
+    width: fit-content;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: white;
+    }
+
+    &::after {
+      content: ">";
+      margin-left: 0.5rem;
+      opacity: 0.5;
+    }
+  }
+}

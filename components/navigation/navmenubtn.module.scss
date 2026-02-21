@@ -1,0 +1,42 @@
+.menuBtn {
+  all: unset;
+  cursor: pointer;
+
+  height: 1.8rem;
+  width: 1.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  overflow: hidden;
+
+  &:hover {
+    div {
+      background-color: lightgray;
+    }
+  }
+
+  div {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    transform-origin: center center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+}
+
+.menuBtn[data-open="false"] {
+}
+
+.menuBtn[data-open="true"] {
+  div:nth-child(1) {
+    transform: rotate(45deg) translate(0.175rem, 0.15rem);
+  }
+  div:nth-child(2) {
+    transform: rotate(-45deg) translate(0.175rem, -0.15rem);
+  }
+}

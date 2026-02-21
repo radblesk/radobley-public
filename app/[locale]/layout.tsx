@@ -5,6 +5,8 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Maven_Pro } from "next/font/google";
 import { getTranslations } from "next-intl/server";
+import Navbar from "@/components/navigation/Navbar";
+import { ogLocaleMap } from "@/helpers/locales";
 
 const globalFont = Maven_Pro({
   subsets: ["latin"],
@@ -16,19 +18,10 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-// Helpers
-const ogLocaleMap: Record<string, string> = {
-  en: "en_US",
-  sk: "sk_SK",
-};
-
 // Viewport
 export function generateViewport(): Viewport {
   return {
-    themeColor: [
-      { media: "(prefers-color-scheme: light)", color: "white" },
-      { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
+    themeColor: "#000000",
     width: "device-width",
     initialScale: 1,
     maximumScale: 5,
@@ -139,7 +132,10 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={globalFont.className}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Navbar />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
