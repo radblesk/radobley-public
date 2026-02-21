@@ -5,6 +5,24 @@
     "keywords": "webdizajn,tvorba web stránok,grafický dizajn,video produkcia,vývoj webu,online marketing,SEO optimalizácia,kreatívny dizajn,programovanie webových aplikácií,sociálne siete,digitálny marketing,firemná identita,dizajn loga,branding,návrh vizitiek,tvorba e-shopov,reklama na internete,správa sociálnych médií,tvorba reklamných videí,dizajn plagátov,návrh tlačovín,UX/UI dizajn,PPC reklama,marketingová stratégia,redizajn webstránok,tvorba blogu,lokálna SEO optimalizácia,tvorba newsletterov,webové aplikácie,online reklama,optimalizácia rýchlosti webu,hosting a domény,WordPress dizajn,minimalistický dizajn,moderný web,responzívne webstránky,návrh katalógov,podpora značky,webové riešenia na mieru"
   },
 
+  "navigation": {
+    "primary": {
+      "stack": "Stack",
+      "portfolio": "Portfólio",
+      "services": "Služby",
+      "lab": "Lab",
+      "contact": "Kontakt"
+    },
+    "secondary": {
+      "ava": "Ava for Reddit",
+      "bleyboard": "BleyBoard",
+      "blog": "Blog",
+      "termsOfService": "Podmienky používania",
+      "privacyPolicy": "Ochrana osobných údajov",
+      "cookiesPolicy": "Cookies"
+    }
+  },
+
   "homepage": {
     "intro": {
       "headline": "Creativity is just connecting things",
