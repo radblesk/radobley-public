@@ -50,6 +50,7 @@
   justify-content: end;
 
   width: 100%;
+  min-height: fit-content;
   height: 100svh;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -97,6 +98,7 @@
 
   @media (width < $mobile) {
     font-size: 2rem;
+    line-height: 4rem;
   }
 
   li {
@@ -121,6 +123,7 @@
 
   @media (width < $mobile) {
     font-size: 1rem;
+    line-height: 2rem;
   }
 
   li {
