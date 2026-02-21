@@ -11,11 +11,7 @@ import { Locale } from "@/helpers/locales";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale } from "use-intl";
 
-type NavBarProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export default function Navbar({ params }: NavBarProps) {
+export default function Navbar() {
   const activeLocale = useLocale() as keyof typeof Locale;
 
   const router = useRouter();
