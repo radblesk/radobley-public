@@ -14,10 +14,10 @@ export default async function Intro() {
     <section id="intro" className={styles.intro}>
       <div className={`container ${styles.mainContent}`}>
         <h1 className={headlineFont.className}>
-          <div data-side="top" className={styles.dashLine} />
-          <div data-side="left" className={styles.dashLine} />
-          <div data-side="bottom" className={styles.dashLine} />
-          <div data-side="right" className={styles.dashLine} />
+          {/*<div data-side="top" className={styles.dashLine} />*/}
+          {/*<div data-side="left" className={styles.dashLine} />*/}
+          {/*<div data-side="bottom" className={styles.dashLine} />*/}
+          {/*<div data-side="right" className={styles.dashLine} />*/}
           {t("headline")}
         </h1>
         <h2>
