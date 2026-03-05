@@ -1,3 +1,5 @@
+// MARK: Global Styles
+
 .global {
   position: sticky;
   top: 0;
@@ -5,24 +7,24 @@
   right: 0;
   height: 4rem;
 
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
   background-color: black;
   color: white;
 
   z-index: 99;
 
-  transition: height 0.3s ease-in-out;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  a, img {
-    height: 1.5rem;
-    width: auto;
+    a, img {
+      height: 1.5rem;
+      width: auto;
+    }
   }
 }
 
-.mainContent {
+.content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,95 +33,26 @@
   max-width: 1500px;
   height: 4rem;
 
-  padding: 1rem calc(1rem + env(safe-area-inset-left)) 1rem
-    calc(1rem + env(safe-area-inset-right));
+  padding: 1rem calc(1rem + env(safe-area-inset-left)) 1rem calc(1rem + env(safe-area-inset-right));
 }
 
-.rightSide {
+// MARK: Desktop Styles
+
+.primaryMenu {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
 
-.fullscreenContent {
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: end;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
 
-  width: 100%;
-  min-height: fit-content;
-  height: calc(100svh - 4rem);
-  overflow-x: hidden;
-  animation: appear 0.3s ease-in-out;
+    font-size: 1rem;
 
-  background-color: black;
-
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  div:nth-child(1) {
-    width: 50%;
-    background-color: #ff3500;
-
-    @media (width < $mobile) {
+    @media (width < $desktop) {
       display: none;
     }
-  }
-
-  div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
-    height: 100%;
-    max-height: calc(100svh - 4rem);
-    width: 50%;
-
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(0, 0, 0, 0.5);
-
-    text-align: start;
-    overflow-y: auto;
-    padding: 3rem calc(6rem + env(safe-area-inset-right)) 3rem
-      calc(2rem + env(safe-area-inset-left));
-
-    @media (width < $tablet) {
-      gap: 2rem;
-      width: 70%;
-    }
-
-    @media (width < $mobile) {
-      width: 100%;
-      padding: 2rem env(safe-area-inset-right) 2rem
-      env(safe-area-inset-left);
-    }
-  }
-}
-
-.primaryList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 5rem;
-  font-weight: 500;
-
-  @media (width < $tablet) {
-    font-size: 4rem;
-  }
-
-  @media (width < $mobile) {
-    font-size: 3.2rem;
   }
 
   a {
@@ -135,33 +68,76 @@
   }
 }
 
-.secondaryList {
-  list-style: none;
+.secondaryMenu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.3rem;
-  line-height: 2.6rem;
+  align-items: center;
+  gap: 1rem;
+}
 
-  a {
-    width: fit-content;
-    color: oklch(from white l c h / 0.8);
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.3s;
+// MARK: Mobile Styles
 
-    &:hover {
-      color: white;
+.mobileContent {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+
+  overflow-x: hidden;
+  animation: appear 0.3s ease-in-out forwards;
+
+  background-color: black;
+
+  @keyframes appear {
+    from {
+      height: 0;
     }
-
-    &::after {
-      content: ">";
-      margin-left: 0.5rem;
-      opacity: 0.5;
+    to {
+      height: 100%;
     }
   }
 
-  @media (width < $tablet) {
-    font-size: 1rem;
+  ul {
+    list-style: none;
+    font-size: 2rem;
+    text-align: start;
+    line-height: 4rem;
+    padding: 1rem 3rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        color: var(--accent);
+      }
+    }
+
+    li {
+      opacity: 0;
+      transform: translateY(-10px);
+      animation: stagger 0.2s ease-in-out forwards;
+
+      @keyframes stagger {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @media (width > $mobile) {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 2rem;
+    }
   }
 }
