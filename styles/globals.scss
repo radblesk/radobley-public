@@ -4,6 +4,16 @@
   --primary: #000;
   --secondary: #575757;
   --accent: #ff3500;
+
+  --vertical-padding: 8rem;
+  --safe-padding: calc(1rem + ((env(safe-area-inset-left) + env(safe-area-inset-right)) / 2));
+  --max-width: 1500px;
+}
+
+@media (width < $mobile) {
+  :root {
+    --vertical-padding: 5rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,34 +38,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-body {
-  display: block;
-  min-height: 100%;
-}
-
-main {
-  display: block;
-}
-
-section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: fit-content;
-  width: 100%;
-}
-
-.container {
   height: 100%;
-  max-width: 1200px;
-  padding: 8rem calc(1rem + env(safe-area-inset-left)) 8rem
-    calc(1rem + env(safe-area-inset-right));
-
-  @media (width < 640px) {
-    padding: 5rem calc(1rem + env(safe-area-inset-left)) 5rem
-      calc(1rem + env(safe-area-inset-right));
-  }
+  scroll-behavior: smooth;
 }
