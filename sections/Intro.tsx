@@ -19,7 +19,7 @@ export default async function Intro() {
           {/*<div data-side="bottom" className={styles.dashLine} />*/}
           {/*<div data-side="right" className={styles.dashLine} />*/}
           {t.rich("headline", {
-            br: (chunks) => <br></br>,
+            br: () => <br></br>,
           })}
         </h1>
         <h2>
