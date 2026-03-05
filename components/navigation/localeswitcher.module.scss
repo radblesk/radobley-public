@@ -1,22 +1,55 @@
 .switcher {
-  &,
-  &::picker(select) {
-    appearance: none;
-    border: none;
+  position: relative;
+  z-index: 999;
+
+  button {
+    all: unset;
+    text-transform: uppercase;
     cursor: pointer;
-    background-color: black;
-    border-radius: 50px;
-    padding: 4px 8px;
-    color: white;
-    font-size: medium;
-    font-weight: 500;
   }
 
-  &:hover {
-    color: oklch(from white l c h / 0.8);
-  }
+  ul {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 3rem;
+    list-style: none;
+    padding: 4px;
 
-  &:active {
-    background: none;
+    background: black;
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
+
+    li {
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 4px;
+        padding: 0.2rem 0;
+
+        &:hover {
+          background: var(--accent);
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+
+    }
   }
+}
+
+.isOpen {
+  border: 1px solid var(--accent);
 }
