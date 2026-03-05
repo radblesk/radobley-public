@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "Radoslav Bley · Creative Studio",
-    "description": "Radoslav Bley - Profesionálny web a grafický dizajn, video produkcia. Spojme sa pre kreatívne a spoľahlivé riešenia vašich projektov.",
-    "keywords": "webdizajn,tvorba web stránok,grafický dizajn,video produkcia,vývoj webu,online marketing,SEO optimalizácia,kreatívny dizajn,programovanie webových aplikácií,sociálne siete,digitálny marketing,firemná identita,dizajn loga,branding,návrh vizitiek,tvorba e-shopov,reklama na internete,správa sociálnych médií,tvorba reklamných videí,dizajn plagátov,návrh tlačovín,UX/UI dizajn,PPC reklama,marketingová stratégia,redizajn webstránok,tvorba blogu,lokálna SEO optimalizácia,tvorba newsletterov,webové aplikácie,online reklama,optimalizácia rýchlosti webu,hosting a domény,WordPress dizajn,minimalistický dizajn,moderný web,responzívne webstránky,návrh katalógov,podpora značky,webové riešenia na mieru"
+    "description": "Radoslav Bley - Profesionálny vývoj webových stránok a iOS mobilných aplikácií. Spojme sa pre spoľahlivé a moderné digitálne riešenia vašich projektov.",
+    "keywords": "tvorba web stránok,vývoj webu,webdizajn,programovanie webových aplikácií,tvorba e-shopov,Next.js developer,moderný web,responzívne webstránky,redizajn webstránok,UX/UI dizajn,webové riešenia na mieru,WordPress dizajn,optimalizácia rýchlosti webu,hosting a domény,SEO optimalizácia,lokálna SEO optimalizácia,vývoj iOS aplikácií,tvorba mobilných aplikácií,Swift developer,SwiftUI,iPhone aplikácie,mobilné aplikácie pre Apple,digitálny marketing,online marketing,PPC reklama,správa sociálnych médií,online reklama"
   },
 
   "navigation": {
@@ -11,12 +11,12 @@
       "portfolio": "Portfólio",
       "services": "Služby",
       "lab": "Lab",
+      "blog": "Blog",
       "contact": "Kontakt"
     },
     "secondary": {
       "ava": "Ava for Reddit",
       "bleyboard": "BleyBoard",
-      "blog": "Blog",
       "termsOfService": "Podmienky používania",
       "privacyPolicy": "Ochrana osobných údajov",
       "cookiesPolicy": "Cookies"
@@ -25,8 +25,8 @@
 
   "homepage": {
     "intro": {
-      "headline": "Creativity is just connecting things",
-      "subheadline": "Vývoj <highlight>webových stránok a aplikácií</highlight>, dizajn <highlight>digitálnych a tlačových grafických podkladov</highlight> a kompletná <highlight>video post-produkcia</highlight>.",
+      "headline": "Kreativita je len <br></br> spájanie vecí",
+      "subheadline": "Vývoj <highlight>webových stránok a aplikácií</highlight> a natívnych <highlight>iOS mobilných aplikácií</highlight> — moderné digitálne riešenia šité na mieru.",
       "primaryButton": "Kontakt",
       "secondaryButton": "Ava for Reddit"
     }

@@ -1,5 +1,34 @@
 {
+  "metadata": {
+    "title": "Radoslav Bley · Creative Studio",
+    "description": "Radoslav Bley - Professional website development and iOS mobile app development. Let's connect for reliable and modern digital solutions for your projects.",
+    "keywords": "website development,web development,web design,web application development,e-shop development,Next.js developer,modern web,responsive websites,website redesign,UX/UI design,custom web solutions,WordPress design,website speed optimization,hosting and domains,SEO optimization,local SEO optimization,iOS app development,mobile app development,Swift developer,SwiftUI,iPhone apps,Apple mobile apps,digital marketing,online marketing,PPC advertising,social media management,online advertising"
+  },
+
+  "navigation": {
+    "primary": {
+      "stack": "Stack",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "lab": "Lab",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "secondary": {
+      "ava": "Ava for Reddit",
+      "bleyboard": "BleyBoard",
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "cookiesPolicy": "Cookies"
+    }
+  },
+
   "homepage": {
-    "title": "Hello world"
+    "intro": {
+      "headline": "Creativity is just <br></br> connecting things",
+      "subheadline": "Development of <highlight>websites and web applications</highlight> and native <highlight>iOS mobile apps</highlight> — modern digital solutions tailored to your needs.",
+      "primaryButton": "Contact",
+      "secondaryButton": "Ava for Reddit"
+    }
   }
 }
