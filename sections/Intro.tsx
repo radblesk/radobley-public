@@ -12,13 +12,15 @@ export default async function Intro() {
 
   return (
     <section id="intro" className={styles.intro}>
-      <div className={`container ${styles.mainContent}`}>
+      <div className={styles.mainContent}>
         <h1 className={headlineFont.className}>
           {/*<div data-side="top" className={styles.dashLine} />*/}
           {/*<div data-side="left" className={styles.dashLine} />*/}
           {/*<div data-side="bottom" className={styles.dashLine} />*/}
           {/*<div data-side="right" className={styles.dashLine} />*/}
-          {t("headline")}
+          {t.rich("headline", {
+            br: (chunks) => <br></br>,
+          })}
         </h1>
         <h2>
           {t.rich("subheadline", {
