@@ -6,9 +6,7 @@ export default function Home() {
       <Intro />
 
       <section id="contact">
-        <div style={{ height: "3000px" }} className={`container`}>
-          Ahoj
-        </div>
+        <div style={{ height: "3000px" }}>Ahoj</div>
       </section>
     </main>
   );

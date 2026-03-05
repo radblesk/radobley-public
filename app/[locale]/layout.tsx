@@ -131,6 +131,13 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={globalFont.className}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `history.scrollRestoration = "manual"`,
+          }}
+        />
+      </head>
       <body>
         <NextIntlClientProvider>
           <Navbar />
