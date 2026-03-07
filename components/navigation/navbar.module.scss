@@ -91,6 +91,10 @@
 
   background-color: black;
 
+  @media (width > $mobile) {
+    justify-content: center;
+  }
+
   @keyframes appear {
     from {
       height: 0;
@@ -137,7 +141,9 @@
     @media (width > $mobile) {
       display: flex;
       flex-flow: row wrap;
-      gap: 2rem;
+      justify-content: space-evenly;
+      width: 100%;
+      max-height: calc(100svh - 4rem);
     }
   }
 }
