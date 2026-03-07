@@ -3,17 +3,15 @@
   align-items: center;
   justify-content: center;
 
+  min-height: min(900px, calc(100vh - 4rem));
   height: fit-content;
-  max-height: 1000px;
 
   overflow: hidden;
   background: black;
 
-  padding: 14rem var(--safe-padding);
+  padding: 5rem var(--safe-padding);
 
-  @media (width < $tablet) {
-    min-height: calc(100svh - 4rem);
-    height: fit-content;
+  @media (width < $desktop) {
     padding: 2rem var(--safe-padding);
   }
 

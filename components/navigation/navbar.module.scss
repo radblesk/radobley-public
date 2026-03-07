@@ -33,7 +33,7 @@
   max-width: 1500px;
   height: 4rem;
 
-  padding: 1rem calc(1rem + env(safe-area-inset-left)) 1rem calc(1rem + env(safe-area-inset-right));
+  padding: 1rem var(--safe-padding);
 }
 
 // MARK: Desktop Styles
@@ -91,10 +91,6 @@
 
   background-color: black;
 
-  @media (width > $mobile) {
-    justify-content: center;
-  }
-
   @keyframes appear {
     from {
       height: 0;
@@ -138,11 +134,14 @@
       }
     }
 
-    @media (width > $mobile) {
+    @media (height < $mobile) {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
       width: 100%;
+      gap: 2rem;
+      row-gap: 0;
+      height: fit-content;
       max-height: calc(100svh - 4rem);
     }
   }

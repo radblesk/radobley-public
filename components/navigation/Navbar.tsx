@@ -111,7 +111,7 @@ export default function Navbar() {
             </Link>
             <ul>
               {primaryMenu.map((item) => (
-                <li onClick={toggleOpen} key={item.id}>
+                <li key={item.id}>
                   <Link href={item.url}>{item.title}</Link>{" "}
                 </li>
               ))}
